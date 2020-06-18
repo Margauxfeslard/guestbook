@@ -20,7 +20,7 @@ public function __construct(Environment $twig)
     $this->twig = $twig;  
 }
     /**
-     * @Route("/hello/{name}", name="homepage")
+     * @Route("/", name="homepage")
      */
     public function index(ConferenceRepository $conferenceRepository)
     {
@@ -30,7 +30,7 @@ public function __construct(Environment $twig)
 
     }
     /**
-     * @Route("/conference/{id}", name="conference")
+     * @Route("/conference/{slug}", name="conference")
      */
     public function show(Request $request, Conference $conference, CommentRepository $commentRepository, ConferenceRepository $conferenceRepository)
     {
